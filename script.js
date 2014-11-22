@@ -3,11 +3,12 @@ $(document).ready(function() {
 	var xScore = 0;
 	var oScore = 0;
 
-function render () {
-	$("#xScore").text("x Score: " + xScore);
-	$("#oScore").text("o Score: " + oScore);
-}
 	render();
+
+	function render() {
+		$("#xScore").text("x Score: " + xScore);
+		$("#oScore").text("o Score: " + oScore);
+	}
 
 	$("td").on("click", function () {
 		var self = $(this);
@@ -23,7 +24,7 @@ function render () {
 		$(this).off("click");
 		gameEval();
 	});
-function gameEval () {
+function gameEval() {
 	if  (
 		$("#one").hasClass('x') && $("#two").hasClass('x') && $("#three").hasClass('x') ||
 		$("#four").hasClass('x') && $("#five").hasClass('x') && $("#six").hasClass('x') ||
@@ -32,11 +33,12 @@ function gameEval () {
 		$("#two").hasClass('x') && $("#five").hasClass('x') && $("#eight").hasClass('x') ||
 		$("#three").hasClass('x') && $("#six").hasClass('x') && $("#nine").hasClass('x') ||
 		$("#one").hasClass('x') && $("#five").hasClass('x') && $("#nine").hasClass('x') ||
-		$("#three").hasClass('x') && $("#two").hasClass('x') && $("#seven").hasClass('x')
+		$("#three").hasClass('x') && $("#five").hasClass('x') && $("#seven").hasClass('x')
 		) {
 		xScore += 1;
 		render();
 		alert("Player X has won the game!");
+		reset();
 	}
 	else if (
 		$("#one").hasClass('o') && $("#two").hasClass('o') && $("#three").hasClass('o') ||
@@ -46,12 +48,18 @@ function gameEval () {
 		$("#two").hasClass('o') && $("#five").hasClass('o') && $("#eight").hasClass('o') ||
 		$("#three").hasClass('o') && $("#six").hasClass('o') && $("#nine").hasClass('o') ||
 		$("#one").hasClass('o') && $("#five").hasClass('o') && $("#nine").hasClass('o') ||
-		$("#three").hasClass('o') && $("#two").hasClass('o') && $("#seven").hasClass('o')
+		$("#three").hasClass('o') && $("#five").hasClass('o') && $("#seven").hasClass('o')
 		) {
-		yScore += 1;
+		oScore += 1;
 		render();
 		alert("Player O has won the game!");
+		reset();
 		}
+	}
+
+	function reset() {
+		$("td").removeClass("x o");
+		$("td").empty();
 	}
 
 });
