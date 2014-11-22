@@ -1,40 +1,32 @@
 <html>
 <head>
-	<title></title>
+	<title>Tic Tac Toe</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-
-<table>
-	<tr>
-		<td></td>
-		<td></td>
-		<td></td>
-	</tr>
-	<tr>
-		<td></td>
-		<td></td>
-		<td></td>
-	</tr>
-	<tr>
-		<td></td>
-		<td></td>
-		<td></td>
-	</tr>
-</table>
-<script>
-	$(document).ready(function() {
-		var turn = 1;
-		$("td").on("click", function () {
-			if (turn % 2 === 0) {
-				$(this).text("X");
-			}
-			else {
-				$(this).text("O");
-			}
-		turn ++;
-		$(this).off("click");
-		});
-	});
-</script>
+	<div id="score">
+		<p>Score</p>
+		<p id="xScore"></p>
+		<p id="oScore"></p>
+	</div>
+	<table>
+		<tr>
+			<td id="one"></td>
+			<td id="two"></td>
+			<td id="three"></td>
+		</tr>
+		<tr>
+			<td id="four"></td>
+			<td id="five"></td>
+			<td id="six"></td>
+		</tr>
+		<tr>
+			<td id="seven"></td>
+			<td id="eight"></td>
+			<td id="nine"></td>
+		</tr>
+	</table>
+	<script src="script.js"></script>
 </body>
 </html>
