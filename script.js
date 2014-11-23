@@ -1,6 +1,6 @@
 $(document).ready(function() {
-	// var xScore = 0;
-	// var oScore = 0;
+	var xScore = 0;
+	var oScore = 0;
 
 	var game = {
 
@@ -10,7 +10,6 @@ $(document).ready(function() {
 			$("td").text("");
 			var xTurn = true;
 			var count = 0;
-
 
 			$("td").on("click", function() {
 				var self = $(this);
@@ -38,6 +37,7 @@ $(document).ready(function() {
 					) {
 						alert("Player X has won the game!");
 						var game_over = true;
+						xScore ++;
 				}
 				else if (
 					$("#one").hasClass('o') && $("#two").hasClass('o') && $("#three").hasClass('o') ||
@@ -51,6 +51,7 @@ $(document).ready(function() {
 					) {
 						alert("Player O has won the game!");
 						var game_over = true;
+						oScore ++;
 				}
 				else if (count === 9) {
 						alert("Draw!");
@@ -59,27 +60,37 @@ $(document).ready(function() {
 				if (game_over) {
 					$('td').off('click');
 					setTimeout(function() {
-						$('body').click(game.begin())
+						$('body').click(game.begin());
 					}, 1);
+					render();
 				}
 			});
-		},
+		}
 	};
 
 	game.begin();
+	render();
+
+	function render() {
+		$("#xScore").text("x Score: " + xScore);
+		$("#oScore").text("o Score: " + oScore);
+	}
+
+	$("#reset").on("click", function() {
+		$('td').off('click');
+		setTimeout(function() {	
+			$('body').click(game.begin());
+		}, 1);
+	});
+
+	$("#newGame").on("click", function() {
+		$('td').off('click');
+		setTimeout(function() {	
+			$('body').click(game.begin());
+		}, 1);
+	});
 
 });
-
-
-
-
-
-
-	// function render() {
-	// 	$("#xScore").text("x Score: " + xScore);
-	// 	$("#oScore").text("o Score: " + oScore);
-	// }
-
 
 
 
