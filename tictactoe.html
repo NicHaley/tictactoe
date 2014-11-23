@@ -6,29 +6,31 @@
 </head>
 <body>
 	<div id="score">
-		<p>Score</p>
 		<p id="xScore"></p>
 		<p id="oScore"></p>
-	</div>
-	<button id="reset" type="button">Reset Board</button>
-	<button id="newGame" type="button">New Game</button>
+	</div><br>
 	<table>
 		<tr>
 			<td id="one"></td>
-			<td id="two"></td>
+			<td id="two" class="sides"></td>
 			<td id="three"></td>
 		</tr>
 		<tr>
-			<td id="four"></td>
-			<td id="five"></td>
-			<td id="six"></td>
+			<td id="four" class="tops">></td>
+			<td id="five" class="tops sides"></td>
+			<td id="six" class="tops"></td>
 		</tr>
 		<tr>
 			<td id="seven"></td>
-			<td id="eight"></td>
+			<td id="eight" class="sides"></td>
 			<td id="nine"></td>
 		</tr>
-	</table>
+	</table><br>
+
+	<div class="controls">
+		<button id="newGame" type="button">New Game</button>
+		<button id="reset" type="button">Reset Board</button>
+	</div>
 	<script src="script.js"></script>
 </body>
 </html>

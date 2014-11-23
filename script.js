@@ -8,7 +8,7 @@ $(document).ready(function() {
 			$("td").removeClass("x");
 			$("td").removeClass("o");
 			$("td").text("");
-			var xTurn = true;
+			var xTurn = Math.floor(Math.random() * 2);
 			var count = 0;
 
 			$("td").on("click", function() {
@@ -72,8 +72,8 @@ $(document).ready(function() {
 	render();
 
 	function render() {
-		$("#xScore").text("x Score: " + xScore);
-		$("#oScore").text("o Score: " + oScore);
+		$("#xScore").text("X Score - " + xScore);
+		$("#oScore").text("O Score - " + oScore);
 	}
 
 	$("#reset").on("click", function() {
@@ -85,9 +85,12 @@ $(document).ready(function() {
 
 	$("#newGame").on("click", function() {
 		$('td').off('click');
+		xScore = 0;
+		oScore = 0;
 		setTimeout(function() {	
 			$('body').click(game.begin());
 		}, 1);
+		render();
 	});
 
 });
