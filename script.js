@@ -21,6 +21,20 @@ $(document).ready(function() {
 					$(this).text("O");
 					self.addClass("o");
 				}
+				var audio1 = $("#shortSound1")[0];
+				var audio2 = $("#shortSound2")[0];
+				var audio3 = $("#shortSound3")[0];
+				var randAudio = 1 + Math.floor(Math.random() * 3)
+				console.log(randAudio);
+				if (randAudio === 1) {
+					audio1.play();
+				}
+				else if (randAudio === 2) {
+					audio2.play();
+				}
+				else {
+					audio3.play();
+				}
 				xTurn = !xTurn;
 				count ++;
 				var game_over = false;
@@ -72,8 +86,8 @@ $(document).ready(function() {
 	render();
 
 	function render() {
-		$("#xScore").text("X Score - " + xScore);
-		$("#oScore").text("O Score - " + oScore);
+		$("#xScore").text("'X' Score - " + xScore);
+		$("#oScore").text("'O' Score - " + oScore);
 	}
 
 	$("#reset").on("click", function() {

@@ -2,7 +2,7 @@ body {
 	text-align: center;
 	background-image: url("http://www.sollysbagelry.com/wp-content/uploads/2013/05/Chalkboard.jpg");
 	color: #f9f9f9;
-	font-family: 'chalkboard';
+	font-family: 'Cabin Sketch', 'Chalkboard';
 }
 
 .controls {
@@ -17,7 +17,7 @@ button {
 	color: #f9f9f9;
 	margin-right: 50px;
 	margin-left: 50px;
-	font-family: 'chalkboard';
+	font-family: 'Fredericka the Great', 'Chalkboard';
 	border-style: solid;
 	border-width: 2px;
 	border-radius: 2px;
@@ -62,11 +62,11 @@ td {
 }
 
 .sides {
-	border-left: 3px solid white;
-	border-right: 3px solid white;
+	border-left: 4px solid #f9f9f9;
+	border-right: 4px solid #f9f9f9;
 }
 
 .tops {
-	border-top: 3px solid white;
-	border-bottom: 3px solid white;
+	border-top: 4px solid #f9f9f9;
+	border-bottom: 4px solid #f9f9f9;
 }
