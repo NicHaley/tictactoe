@@ -50,6 +50,7 @@ table {
 	margin-bottom: 50px;
 	display: inline-block;
 	border-spacing: 0px;
+	z-index: 0;
 }
 
 td {
@@ -64,9 +65,31 @@ td {
 .sides {
 	border-left: 4px solid #f9f9f9;
 	border-right: 4px solid #f9f9f9;
+	border
 }
 
 .tops {
 	border-top: 4px solid #f9f9f9;
 	border-bottom: 4px solid #f9f9f9;
 }
+
+#winner {
+	display: none;
+}
+
+.gif {
+	position: absolute;
+	right: 100px;
+	top: 480px;
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+

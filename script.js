@@ -2,9 +2,11 @@ $(document).ready(function() {
 	var xScore = 0;
 	var oScore = 0;
 
+
 	var game = {
 
 		begin: function() {
+
 			$("td").removeClass("x");
 			$("td").removeClass("o");
 			$("td").text("");
@@ -25,7 +27,6 @@ $(document).ready(function() {
 				var audio2 = $("#shortSound2")[0];
 				var audio3 = $("#shortSound3")[0];
 				var randAudio = 1 + Math.floor(Math.random() * 3)
-				console.log(randAudio);
 				if (randAudio === 1) {
 					audio1.play();
 				}
@@ -49,6 +50,7 @@ $(document).ready(function() {
 					$("#one").hasClass('x') && $("#five").hasClass('x') && $("#nine").hasClass('x') ||
 					$("#three").hasClass('x') && $("#five").hasClass('x') && $("#seven").hasClass('x')
 					) {
+						$(".gif").fadeIn(3000, function() { $(".gif").fadeOut(3000); });
 						alert("Player X has won the game!");
 						var game_over = true;
 						xScore ++;
@@ -63,6 +65,7 @@ $(document).ready(function() {
 					$("#one").hasClass('o') && $("#five").hasClass('o') && $("#nine").hasClass('o') ||
 					$("#three").hasClass('o') && $("#five").hasClass('o') && $("#seven").hasClass('o')
 					) {
+						$(".gif").fadeIn(3000, function() { $(".gif").fadeOut(3000); });
 						alert("Player O has won the game!");
 						var game_over = true;
 						oScore ++;

@@ -2,6 +2,10 @@
 <head>
 	<title>Tic Tac Toe</title>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<link href='http://fonts.googleapis.com/css?family=Patrick+Hand|Playfair+Display|Fredericka+the+Great|Cabin+Sketch|Shadows+Into+Light|Just+Me+Again+Down+Here|Merienda+One|Pacifico|Slabo+13px|Amatic+SC|Lobster+Two|Patua+One|Quattrocento|Sacramento' rel='stylesheet' type='text/css'>
 </head>
@@ -14,18 +18,20 @@
 		<source src="chalkshort.mp3"></source>
 		<source src="chalkshort.ogg"></source>
 	</audio>
-		<audio id="shortSound2">
+	<audio id="shortSound2">
 		<source src="chalkshort2.mp3"></source>
 		<source src="chalkshort2.ogg"></source>
 	</audio>
-		<audio id="shortSound3">
+	<audio id="shortSound3">
 		<source src="chalkshort3.mp3"></source>
 		<source src="chalkshort3.ogg"></source>
 	</audio>
+	<p id="winner"></p>
 	<div id="score">
 		<p id="xScore"></p>
 		<p id="oScore"></p>
 	</div><br>
+	<img class="gif" src="http://i.imgur.com/ilphX1t.gif" />
 	<table>
 		<tr>
 			<td id="one"></td>
